@@ -1,1 +1,5 @@
-"# task-friends"  git init git add README.md git commit -m "first commit" git branch -M main git remote add origin https://github.com/paketaaa/task-friends.git git push -u origin main
+just a test README
+
+First of ALL : npm i
+To run dev: Gulp
+To build prod: Gulp Build
