@@ -1,0 +1,42 @@
+.card{
+    &-plans{
+        width: 100%;
+        @include flex-ss;
+        flex-direction: column;
+
+        &__title{
+            @include heading-20;
+            margin-bottom: 19px;
+        }
+
+        &__img{
+            @include flex-cc;
+            background: $gray;
+            width: 100%;
+            height: 287px;
+
+            margin-bottom: 32px;
+
+            &:hover,
+            &:focus{
+                ~.card-plans__button{
+                    filter: brightness(110%);
+                }
+            }
+
+            &:active{
+                ~.card-plans__button{
+                    filter: brightness(120%);
+                }
+            }
+        }
+
+        &__button{
+            min-height: 70px;
+            width: 100%;
+
+            font-size: 1.8rem;
+            color: #fff;
+        }
+    }
+}

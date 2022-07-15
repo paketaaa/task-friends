@@ -1,0 +1,139 @@
+.intro{
+    @include flex-ss;
+    align-items: stretch;
+    position: relative;
+    min-height: 536px;
+    color: #fff;
+
+
+    &__background{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__container{
+        @include flex-sc;
+        flex-direction: column;
+    }
+
+    &__title{
+        margin-bottom: 37px;
+    }
+}
+
+.section{
+    &-description{
+        background: #333333;
+        padding: 8px 0;
+        
+        color: #fff;
+
+        &__container{
+            @include flex-cs;
+        }
+
+        &__icon{
+            margin-right: 23px;
+        }
+
+        &__desc{
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        &__button{
+            margin-left: auto;
+        }
+    }
+}
+
+.plans{
+    &__container{
+        @include flex-cc;
+        flex-direction: column;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        min-height: 100vh;
+    }
+
+    &__title{
+        margin-bottom: 58px;
+    }
+}
+
+.contacts{
+    padding-top: 51px;
+    padding-bottom: 92px;
+    &__container{
+        @include flex-cc;
+        flex-direction: column;
+    }
+
+    &__title{
+        margin-bottom: 83px;
+    }
+
+    &__wrapper{
+        width: 100%;
+        @include flex-csb;
+
+        .contacts-item{
+            margin-bottom: 25px;
+            &:last-child{
+                margin-bottom: 0;
+                margin-top: auto;
+            }
+
+            &-tie{
+                @include flex-ss;
+                flex-direction: column;
+                width: calc(50% - 40px);
+                align-self: stretch;
+            }
+        }
+    }
+
+    &-item{
+        display: inline-flex;
+        align-items: center;
+        
+        &__icon{
+            &.icon-map-marker{
+                ~.contacts-item__label{
+                    margin-left: 39px;
+                }
+            }
+            &.icon-phone{
+                ~.contacts-item__label{
+                    margin-left: 31px;
+                }
+            }
+        }
+        &__label{
+            flex-shrink: 1;
+            font-size: 2.2rem;
+            line-height: 136%;
+            font-weight: 400;
+            color: $grey;
+            word-break: break-word;
+
+            a{
+                &:hover,
+                &:focus{
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.header{
+    overflow: hidden;
+    background: #fff;
+    padding-top: 24px;
+    padding-bottom: 23px;
+
+    &-nav{
+        &__item{
+            margin: 0px 26px;
+            border-bottom: 1px solid transparent;
+
+            &:hover{
+                border-color: rgba($color: #000, $alpha: .7);
+            }
+        }
+    }
+
+    &__nav{
+        @include flex-cc;
+        margin-left: -26px;
+        margin-right: -26px;
+    }
+
+    &-burger{
+        position: relative;
+        overflow: hidden;
+
+        width: 30px;
+        height: 30px;
+
+        span{
+            @include animate;
+            position: absolute;
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #000;
+
+
+            &:nth-child(1){
+                left: initial;
+                right: 1px;
+                top: 6px;
+            }
+            &:nth-child(2){
+                left: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3){
+                left: 1px;
+                bottom: 6px;
+            }
+        }
+
+        &:hover{
+            span{
+                &:nth-child(1),
+                &:nth-child(3){
+                    width: 20px;
+                }
+            }
+        }
+
+        &.header-burger--active{
+            span{
+                &:nth-child(1){
+                    width: 20px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+                &:nth-child(2){
+                    left: 100%;
+                    opacity: 0;
+                }
+                &:nth-child(3){
+                    width: 20px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+
+            &:hover{
+                span{
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    &-dropdown{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 6px);
+        background: #fff;
+        z-index: 20;
+        overflow-y: auto;
+        padding-bottom: 60px;
+        top: 61px;
+    }
+}
