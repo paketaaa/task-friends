@@ -9,7 +9,8 @@
             margin: 0px 26px;
             border-bottom: 1px solid transparent;
 
-            &:hover{
+            &:hover,
+            &:focus{
                 border-color: rgba($color: #000, $alpha: .7);
             }
         }
@@ -53,7 +54,8 @@
             }
         }
 
-        &:hover{
+        &:hover,
+        &:focus{
             span{
                 &:nth-child(1),
                 &:nth-child(3){
@@ -82,7 +84,8 @@
                 }
             }
 
-            &:hover{
+            &:hover,
+            &:focus{
                 span{
                     width: 24px;
                 }
